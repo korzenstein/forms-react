@@ -1,0 +1,92 @@
+.download {
+    fill: rgb(255, 255, 255);
+    @keyframes slide-right {
+            0% {
+                transform: translateY(0)
+            }
+    
+            to {
+                transform: translateY(1px)
+            }
+        }
+&:hover,
+&:focus {
+    animation: slide-right .5s cubic-bezier(1, -.43, .68, .57) infinite alternate both;
+
+}
+     
+
+}
+
+
+
+.breakdown,
+.sign,
+.tea {
+--secondary: #e7e7e7;
+}
+
+.tea #teabag {
+    transform-origin: top center;
+    transform: rotate(3deg);
+    animation: swing 2s infinite;
+}
+
+.tea #steamL {
+    stroke-dasharray: 13;
+    stroke-dashoffset: 13;
+    animation: steamLarge 2s infinite;
+}
+
+.tea #steamR {
+    stroke-dasharray: 9;
+    stroke-dashoffset: 9;
+    animation: steamSmall 2s infinite;
+}
+
+
+@keyframes swing {
+    50% {
+        transform: rotate(-3deg);
+    }
+}
+
+
+
+@keyframes steamLarge {
+    0% {
+        stroke-dashoffset: 13;
+        opacity: 0.6;
+    }
+
+    100% {
+        stroke-dashoffset: 39;
+        opacity: 0;
+    }
+}
+
+@keyframes steamSmall {
+    10% {
+        stroke-dashoffset: 9;
+        opacity: 0.6;
+    }
+
+    80% {
+        stroke-dashoffset: 27;
+        opacity: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 27;
+        opacity: 0;
+    }
+}
+
+
+.text {
+    stroke:rgb(216, 214, 214);
+    fill:rgb(216, 214, 214);
+    &:hover {
+        cursor: pointer;
+    }
+}
